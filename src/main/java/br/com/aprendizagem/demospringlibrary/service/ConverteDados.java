@@ -1,11 +1,12 @@
 package br.com.aprendizagem.demospringlibrary.service;
 
-import br.com.aprendizagem.demospringlibrary.interfaces.IConverteDados;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import br.com.aprendizagem.demospringlibrary.interfaces.IConverteDados;
+
 public class ConverteDados implements IConverteDados {
-    private ObjectMapper mapper = new ObjectMapper();
+    private final ObjectMapper mapper = new ObjectMapper();
 
     @Override
     public <T> T obterDados(String json, Class<T> classe) {
